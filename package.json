@@ -1,0 +1,35 @@
+{
+  "name": "pigmenta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "bin": {
+    "pigmenta": "./dist/index.js"
+  },
+  "exports": {
+    "./types": "./dist/types.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostafa-kheibary/Pigmenta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mostafa-kheibary/Pigmenta/issues"
+  },
+  "homepage": "https://github.com/mostafa-kheibary/Pigmenta#readme",
+  "dependencies": {
+    "prompts": "^1.0.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.1",
+    "@types/prompts": "^2.4.9"
+  }
+}
