@@ -7,7 +7,10 @@ export interface Options {
   output: "css" | "scss" | "tailwind";
   /** Load the theme lazily */
   lazy: boolean;
-  dest: "./";
+  /** destination of the generated output file */
+  dest: string;
+  /** default theme mode */
+  default: string;
 }
 
 export interface Tokens {
