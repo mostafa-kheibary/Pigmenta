@@ -1,0 +1,9 @@
+.light {
+	--surface: var(--pt-black);
+}
+.dark {
+	--surface: var(--pt-white);
+}
+.another {
+	--surface: var(--pt-white);
+}

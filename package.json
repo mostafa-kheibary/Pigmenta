@@ -1,36 +1,40 @@
 {
-  "name": "pigmenta",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./dist/index.js",
-  "scripts": {
-    "build": "tsc"
-  },
-  "bin": {
-    "pigmenta": "./dist/index.js"
-  },
-  "exports": {
-    "./types": "./dist/types.d.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mostafa-kheibary/Pigmenta.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/mostafa-kheibary/Pigmenta/issues"
-  },
-  "homepage": "https://github.com/mostafa-kheibary/Pigmenta#readme",
-  "dependencies": {
-    "prompts": "^1.0.0",
-    "typescript": "^5.9.3"
-  },
-  "devDependencies": {
-    "@types/node": "^24.7.1",
-    "@types/prompts": "^2.4.9",
-    "prettier": "^3.6.2"
-  }
+	"name": "pigmenta",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./dist/index.js",
+	"scripts": {
+		"dev": "nodemon --watch \"./src\" --ext ts,json --ignore dist --exec \"npm run build && npm link\"",
+		"build": "tsc"
+	},
+	"bin": {
+		"pigmenta": "./dist/index.js"
+	},
+	"exports": {
+		"./types": "./dist/types.d.ts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mostafa-kheibary/Pigmenta.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/mostafa-kheibary/Pigmenta/issues"
+	},
+	"homepage": "https://github.com/mostafa-kheibary/Pigmenta#readme",
+	"dependencies": {
+		"commander": "^14.0.1",
+		"prompts": "^1.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.7.1",
+		"@types/prompts": "^2.4.9",
+		"nodemon": "^3.1.10",
+		"prettier": "^3.6.2",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.9.3"
+	}
 }

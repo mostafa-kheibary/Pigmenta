@@ -1,8 +1,9 @@
 import { writeFile } from 'fs/promises';
 import prompts from 'prompts';
 import { createPigmentaConfigFileTemplate } from './configTemplate.js';
+import path from 'path';
 
-export const initiatePigmentaWithUserPrompt = async (path: string) => {
+export const initiatePigmentaWithUserPrompt = async (configPath: string) => {
 	const { output } = await prompts({
 		type: 'select',
 		name: 'output',
@@ -25,11 +26,11 @@ export const initiatePigmentaWithUserPrompt = async (path: string) => {
 	const { dest } = await prompts({
 		type: 'text',
 		name: 'dest',
-		hint: './',
+		initial: './src',
 		message: 'location of the generated theme folder ?',
 	});
 	await writeFile(
-		path,
+		path.resolve(configPath),
 		createPigmentaConfigFileTemplate({ dest, lazy, output }),
 	);
 	console.log('Pigmenta Initiate Successfully');

@@ -1,26 +1,20 @@
 /** @type {import('pigmenta/types').Config} */
-const pallets = {
-  black: "#000",
-  white: "#fff",
-};
-
-/** @type {import('pigmenta/types').Config} */
 export default {
-  options: {
-    /** Output type: css, scss, tailwind */
-    output: "tailwind",
-    /** Load the theme lazily */
-    lazy: true,
-    /** destination of the generated output file */
-    dest: "./hello",
-    /** default theme mode */
-    default: light;
-  },
-  tokens: {
-    surface: {
-      light: pallets.white,
-      dark: pallets.black,
-      another: pallets.black,
-    },
-  },
+	options: {
+		output: 'css',
+		lazy: true,
+		dest: './src',
+		default: 'light',
+	},
+	pallets: {
+		black: '#000',
+		white: '#fff',
+	},
+	tokens: {
+		surface: {
+			light: 'black',
+			dark: 'white',
+			another: 'white',
+		},
+	},
 };

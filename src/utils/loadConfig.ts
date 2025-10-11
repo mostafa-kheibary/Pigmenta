@@ -1,8 +1,10 @@
 import { readFile } from 'fs/promises';
 import { Config } from '../types.js';
+import path from 'path';
 
-export const loadConfig = async (path: string) => {
-	const configText = await readFile(path, {
+export const loadConfig = async (configPath: string) => {
+	console.log(path.resolve(configPath));
+	const configText = await readFile(path.resolve(configPath), {
 		encoding: 'utf8',
 	});
 

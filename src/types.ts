@@ -13,13 +13,10 @@ export interface Options {
 	default: string;
 }
 
-export interface Tokens {
-	[tokenName: string]: {
-		[mode: string]: keyof Pallets | string;
-	};
-}
+export type Tokens = Record<string, Record<string, string>>;
 
 export interface Config {
 	options: Options;
+	pallets: Pallets;
 	tokens: Tokens;
 }
