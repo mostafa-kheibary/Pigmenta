@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.7.1",
-    "@types/prompts": "^2.4.9"
+    "@types/prompts": "^2.4.9",
+    "prettier": "^3.6.2"
   }
 }

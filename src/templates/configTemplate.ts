@@ -1,7 +1,7 @@
-import { Options } from "../types.js";
+import { Options } from '../types.js';
 
 export const createPigmentaConfigFileTemplate = (
-  options: Partial<Options>
+	options: Partial<Options>,
 ) => `/** @type {import('pigmenta/types').Config} */
 const pallets = {
   black: "#000",
