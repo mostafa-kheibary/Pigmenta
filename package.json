@@ -12,7 +12,7 @@
 	},
 	"exports": {
 		"./types": "./dist/types.d.ts",
-		"./plugin": "./dist/plugin",
+		"./plugin/vite": "./dist/plugin/vite.js",
 		"./client": "./dist/client"
 	},
 	"repository": {
