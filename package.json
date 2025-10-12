@@ -12,6 +12,7 @@
 	},
 	"exports": {
 		"./types": "./dist/types.d.ts",
+		"./plugin": "./src/plugin",
 		"./client": "./dist/client"
 	},
 	"repository": {
