@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'fs/promises';
 import prompts from 'prompts';
 import { createPigmentaConfigFileTemplate } from './configTemplate.js';
+import { exec } from 'child_process';
 import path from 'path';
 
 export const initiatePigmentaWithUserPrompt = async (configPath: string) => {
@@ -32,6 +33,12 @@ export const initiatePigmentaWithUserPrompt = async (configPath: string) => {
 		await writeFile(path.resolve('./.gitignore'), gitIgnore, {
 			encoding: 'utf8',
 		});
-	} catch (error) {}
-	console.log('Pigmenta Initiate Successfully');
+	} catch {}
+
+	try {
+		console.log('installing pigment...');
+		exec('npm i pigmenta', () => {
+			console.log('Pigmenta Initiate Successfully');
+		});
+	} catch {}
 };

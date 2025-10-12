@@ -1,7 +1,7 @@
 {
 	"name": "pigmenta",
-	"version": "1.0.0",
-	"description": "",
+	"version": "0.0.1",
+	"description": "The Complete Toolkit for App and UI Theming",
 	"main": "./dist/index.js",
 	"scripts": {
 		"dev": "nodemon --watch \"./src\" --ext ts,json --ignore dist --exec \"npm run build && npm link\"",
