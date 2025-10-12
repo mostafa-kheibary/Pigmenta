@@ -12,7 +12,7 @@
 	},
 	"exports": {
 		"./types": "./dist/types.d.ts",
-		"./plugin": "./src/plugin",
+		"./plugin": "./dist/plugin",
 		"./client": "./dist/client"
 	},
 	"repository": {
