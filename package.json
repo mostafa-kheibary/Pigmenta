@@ -1,6 +1,6 @@
 {
 	"name": "pigmenta",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "The Complete Toolkit for App and UI Theming",
 	"main": "./dist/index.js",
 	"scripts": {
