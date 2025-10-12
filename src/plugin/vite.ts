@@ -1,6 +1,6 @@
 import { generateThemes } from '../generators/index.js';
 
-export default function pigmentaVitePlugin() {
+export const pigmentaVitePlugin = () => {
 	let config: any;
 
 	return {
@@ -15,4 +15,4 @@ export default function pigmentaVitePlugin() {
 			if (file.endsWith('pigmenta.config.js')) generateThemes();
 		},
 	};
-}
+};
