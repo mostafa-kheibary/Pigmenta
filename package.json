@@ -11,7 +11,8 @@
 		"pigmenta": "./dist/index.js"
 	},
 	"exports": {
-		"./types": "./dist/types.d.ts"
+		"./types": "./dist/types.d.ts",
+		"./client": "./dist/client"
 	},
 	"repository": {
 		"type": "git",

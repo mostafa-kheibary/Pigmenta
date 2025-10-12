@@ -1,12 +1,9 @@
 export interface Pallets {
-	[key: string]: string;
+	[palletName: string]: string | Pallets;
 }
-
 export interface Options {
 	/** Output type: css, scss, tailwind */
-	output: 'css' | 'scss' | 'tailwind';
-	/** Load the theme lazily */
-	lazy: boolean;
+	output: 'css' | 'tailwind';
 	/** destination of the generated output file */
 	dest: string;
 	/** default theme mode */

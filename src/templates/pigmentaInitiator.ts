@@ -1,4 +1,4 @@
-import { writeFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 import prompts from 'prompts';
 import { createPigmentaConfigFileTemplate } from './configTemplate.js';
 import path from 'path';
@@ -10,18 +10,9 @@ export const initiatePigmentaWithUserPrompt = async (configPath: string) => {
 		message: "Choose how you want to create your app's theme:",
 		choices: [
 			{ title: 'Css', value: 'css' },
-			{ title: 'Sass', value: 'sass' },
 			{ title: 'Tailwind css', value: 'tailwind' },
 		],
 		initial: 0,
-	});
-	const { lazy } = await prompts({
-		type: 'toggle',
-		name: 'lazy',
-		message: 'Lazy load the themes?',
-		initial: true,
-		active: 'Enabled',
-		inactive: 'Disabled',
 	});
 	const { dest } = await prompts({
 		type: 'text',
@@ -31,7 +22,16 @@ export const initiatePigmentaWithUserPrompt = async (configPath: string) => {
 	});
 	await writeFile(
 		path.resolve(configPath),
-		createPigmentaConfigFileTemplate({ dest, lazy, output }),
+		createPigmentaConfigFileTemplate({ dest, output }),
 	);
+	try {
+		let gitIgnore = await readFile(path.resolve('./.gitignore'), {
+			encoding: 'utf8',
+		});
+		gitIgnore += '\n.pigmenta';
+		await writeFile(path.resolve('./.gitignore'), gitIgnore, {
+			encoding: 'utf8',
+		});
+	} catch (error) {}
 	console.log('Pigmenta Initiate Successfully');
 };

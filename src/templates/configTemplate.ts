@@ -6,7 +6,6 @@ export const createPigmentaConfigFileTemplate = (
 export default {
   options: {
     output: "${options.output}",
-    lazy: ${options.lazy},
     dest: "${options.dest}",
     default: "light"
   },
