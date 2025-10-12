@@ -36,8 +36,8 @@ export const initiatePigmentaWithUserPrompt = async (configPath: string) => {
 	} catch {}
 
 	try {
-		console.log('installing pigment...');
-		exec('npm i pigmenta', () => {
+		console.log('installing pigmenta...');
+		exec('npm i pigmenta@latest -y', () => {
 			console.log('Pigmenta Initiate Successfully');
 		});
 	} catch {}
