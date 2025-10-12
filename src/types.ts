@@ -8,6 +8,8 @@ export interface Options {
 	dest: string;
 	/** default theme mode */
 	default: string;
+	/** prefix for token name */
+	tokenPrefix: string;
 }
 
 export type Tokens = Record<string, Record<string, string>>;
