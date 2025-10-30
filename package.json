@@ -1,42 +1,19 @@
 {
 	"name": "pigmenta",
-	"version": "0.0.13",
-	"description": "The Complete Toolkit for App and UI Theming",
-	"main": "./dist/index.js",
-	"scripts": {
-		"dev": "nodemon --watch \"./src\" --ext ts,json --ignore dist --exec \"npm run build && npm link\"",
-		"build": "tsc"
-	},
-	"bin": {
-		"pigmenta": "./dist/index.js"
-	},
-	"exports": {
-		"./types": "./dist/types.d.ts",
-		"./vite": "./dist/plugin/vite.js",
-		"./client": "./dist/client"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/mostafa-kheibary/Pigmenta.git"
-	},
-	"keywords": [],
-	"author": "",
+	"version": "1.0.0",
+	"description": "pigmenta is a lightweight image color palette extraction library for JavaScript. It analyzes images and extracts the dominant colors, providing a simple API for developers to integrate color palette functionality into their applications.",
 	"license": "ISC",
-	"type": "module",
-	"bugs": {
-		"url": "https://github.com/mostafa-kheibary/Pigmenta/issues"
-	},
-	"homepage": "https://github.com/mostafa-kheibary/Pigmenta#readme",
-	"dependencies": {
-		"commander": "^14.0.1",
-		"prompts": "^1.0.0"
+	"packageManager": "pnpm@10.19.0",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"build": "lerna run build"
 	},
 	"devDependencies": {
-		"@types/node": "^24.7.1",
-		"@types/prompts": "^2.4.9",
-		"nodemon": "^3.1.10",
-		"prettier": "^3.6.2",
-		"ts-node": "^10.9.2",
-		"typescript": "^5.9.3"
+		"eslint": "^9.38.0",
+		"globals": "^16.4.0",
+		"lerna": "^9.0.0",
+		"typescript-eslint": "^8.46.2"
 	}
 }

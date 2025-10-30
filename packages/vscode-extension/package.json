@@ -1,7 +1,8 @@
 {
-	"name": "pigmenta",
+	"name": "@pigmenta/vscode-extension",
 	"displayName": "pigmenta",
 	"description": "pigmenta",
+	"private": true,
 	"version": "0.0.1",
 	"publisher": "mostafa-kheibary",
 	"engines": {
@@ -36,10 +37,10 @@
 		}
 	],
 	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
+		"vscode:prepublish": "npm run build",
+		"build": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
+		"pretest": "npm run build && npm run lint",
 		"lint": "eslint src"
 	},
 	"devDependencies": {

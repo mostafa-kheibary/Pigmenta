@@ -1,9 +1,0 @@
-{
-  "include": ["src/**/*"],
-  "compilerOptions": {
-    "outDir": "./dist",
-    "module": "nodenext",
-    "declaration": true,
-    "sourceMap": false
-  }
-}

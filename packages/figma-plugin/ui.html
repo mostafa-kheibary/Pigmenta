@@ -1,0 +1,14 @@
+<textarea name="" rows="10" style="width: 100%" id=""></textarea>
+
+<button id="create">Get Pallet</button>
+<script>
+	document.getElementById('create').onclick = () => {
+		parent.postMessage({ pluginMessage: { type: 'create' } }, '*');
+	};
+
+	window.onmessage = (e) => {
+		document.querySelector('textarea').innerHTML = JSON.stringify(
+			e.data.pluginMessage,
+		);
+	};
+</script>
