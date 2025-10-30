@@ -9,16 +9,7 @@ export default {
     dest: "${options.dest}",
     default: "light"
   },
-  pallets: {
-    black: "#000",
-    white: "#fff"
-  },
-  tokens: {
-    surface: {
-      light: "white",
-      dark: "black",
-      another: "black",
-    },
-  },
+  pallets: {},
+  tokens: {},
 };
 `;

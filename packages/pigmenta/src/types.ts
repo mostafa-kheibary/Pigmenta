@@ -10,6 +10,8 @@ export interface Options {
 	default: string;
 	/** prefix for token name */
 	tokenPrefix: string;
+	/** path for the pigmenta config to extend */
+	extend: string[];
 }
 
 export type Tokens = Record<string, Record<string, string>>;

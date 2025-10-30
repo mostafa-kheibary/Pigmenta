@@ -1,10 +1,10 @@
 {
 	"name": "pigmenta",
-	"version": "0.0.13",
+	"version": "0.0.14",
 	"description": "The Complete Toolkit for App and UI Theming",
 	"main": "./dist/index.js",
 	"scripts": {
-		"dev": "nodemon --watch \"./src\" --ext ts,json --ignore dist --exec \"npm run build && npm link\"",
+		"dev": "nodemon --watch \"./src\" --ext ts,json --ignore dist --exec \"pnpm build && npm link\"",
 		"build": "tsc"
 	},
 	"bin": {
@@ -12,8 +12,7 @@
 	},
 	"exports": {
 		"./types": "./dist/types.d.ts",
-		"./vite": "./dist/plugin/vite.js",
-		"./client": "./dist/client"
+		"./vite": "./dist/plugin/vite.js"
 	},
 	"repository": {
 		"type": "git",
