@@ -1,0 +1,80 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.6.7",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "13476885152074417492"
+      },
+      {
+        "file": ".npmignore",
+        "hash": "6176346734599557905"
+      },
+      {
+        "file": "package.json",
+        "hash": "14666046704790837572"
+      },
+      {
+        "file": "src/.DS_Store",
+        "hash": "979084188622859136"
+      },
+      {
+        "file": "src/generators/cssGenerator.ts",
+        "hash": "6413505163371203049"
+      },
+      {
+        "file": "src/generators/index.ts",
+        "hash": "17737905196880967059"
+      },
+      {
+        "file": "src/generators/tailwindGenerator.ts",
+        "hash": "16291421034161699851"
+      },
+      {
+        "file": "src/index.ts",
+        "hash": "17097326922469217109"
+      },
+      {
+        "file": "src/plugin/vite.ts",
+        "hash": "4559014144577643898"
+      },
+      {
+        "file": "src/templates/configTemplate.ts",
+        "hash": "9097729429104880205"
+      },
+      {
+        "file": "src/templates/pigmentaInitiator.ts",
+        "hash": "2314245194133565427"
+      },
+      {
+        "file": "src/types.ts",
+        "hash": "4034578000514959671"
+      },
+      {
+        "file": "src/utils/flatPallets.ts",
+        "hash": "12611257789540688788"
+      },
+      {
+        "file": "src/utils/generateConfigType.ts",
+        "hash": "4749703453373905146"
+      },
+      {
+        "file": "src/utils/loadConfig.ts",
+        "hash": "2030110499565925920"
+      },
+      {
+        "file": "src/utils/makeFolder.ts",
+        "hash": "12733471686678441788"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "2661281638341840341"
+      }
+    ]
+  },
+  "externalNodesHash": "3244421341483603138"
+}
