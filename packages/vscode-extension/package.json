@@ -1,10 +1,11 @@
 {
-	"name": "@pigmenta/vscode-extension",
+	"name": "pigmenta-vscode-extension",
 	"displayName": "pigmenta",
 	"description": "pigmenta",
 	"private": true,
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "mostafa-kheibary",
+	"packageManager": "pnpm@10.19.0",
 	"engines": {
 		"vscode": "^1.0.0"
 	},
@@ -37,10 +38,10 @@
 		}
 	],
 	"scripts": {
-		"vscode:prepublish": "npm run build",
+		"vscode:prepublish": "pnpm build",
 		"build": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"pretest": "npm run build && npm run lint",
+		"pretest": "pnpm build && pnpm lint",
 		"lint": "eslint src"
 	},
 	"devDependencies": {

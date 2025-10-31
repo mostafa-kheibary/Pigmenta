@@ -13,7 +13,7 @@ export const loadConfig = async (configPath: string) => {
 	let pallets = {};
 	let tokens = {};
 
-	if (module.options.extend) {
+	if (module.options?.extend) {
 		for (const extensionPath of module.options.extend) {
 			const config = await loadConfig(extensionPath);
 			pallets = { ...pallets, ...config.pallets };

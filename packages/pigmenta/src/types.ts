@@ -17,7 +17,7 @@ export interface Options {
 export type Tokens = Record<string, Record<string, string>>;
 
 export interface Config {
-	options: Options;
+	options?: Options;
 	pallets: Pallets;
 	tokens: Tokens;
 }

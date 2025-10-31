@@ -12,10 +12,10 @@ export const tailwindGenerator = async (
 	tokensVarsCss += '@import "tailwindcss";\n\n';
 
 	const tokensKey = Object.keys(tokens);
+	if (tokensKey.length === 0) return;
+
 	const themes = Object.keys(tokens[tokensKey[0]]);
-	const defaultThemeIndex = themes.findIndex(
-		(theme) => theme === options.default,
-	);
+	const defaultThemeIndex = themes.findIndex((theme) => theme === options.default);
 	themes.splice(defaultThemeIndex, 1);
 
 	tokensVarsCss += '@theme {\n';

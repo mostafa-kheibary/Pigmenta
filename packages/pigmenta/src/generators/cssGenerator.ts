@@ -1,7 +1,6 @@
 import path from 'path';
 import fs from 'fs/promises';
 import { Options, Tokens } from '../types.js';
-import { makeFolder } from '../utils/makeFolder.js';
 
 export const cssGenerator = async (
 	options: Options,
@@ -11,10 +10,9 @@ export const cssGenerator = async (
 	let tokensVarsCss = '';
 
 	const tokensKey = Object.keys(tokens);
+	if (tokensKey.length === 0) return;
 	const themes = Object.keys(tokens[tokensKey[0]]);
-	const defaultThemeIndex = themes.findIndex(
-		(theme) => theme === options.default,
-	);
+	const defaultThemeIndex = themes.findIndex((theme) => theme === options.default);
 	themes.splice(defaultThemeIndex, 1);
 
 	tokensVarsCss += ':root {\n';

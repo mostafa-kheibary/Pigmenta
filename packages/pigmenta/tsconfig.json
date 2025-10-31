@@ -3,6 +3,7 @@
 		"outDir": "./dist",
 		"module": "nodenext",
 		"declaration": true,
-		"sourceMap": false
+		"sourceMap": false,
+		"strict": true
 	}
 }
