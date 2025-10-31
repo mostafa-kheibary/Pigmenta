@@ -5,7 +5,7 @@
 	"main": "./dist/index.js",
 	"scripts": {
 		"dev": "nodemon --watch \"./src\" --ext ts,json --ignore dist --exec \"pnpm build && npm link\"",
-		"build": "tsc"
+		"build": "tsc && cp ../../README.md ./README.md"
 	},
 	"bin": {
 		"pigmenta": "./dist/index.js"
