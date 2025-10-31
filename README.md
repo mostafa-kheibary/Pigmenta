@@ -18,10 +18,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src=".github/assets/pigmenta-banner.png" alt="Pigmenta banner" width="100%" />
-</p>
-
 ---
 
 ## 🌈 Overview
