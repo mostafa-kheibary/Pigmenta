@@ -2,7 +2,7 @@
 	"name": "pigmenta",
 	"version": "1.0.0",
 	"description": "pigmenta is a lightweight image color palette extraction library for JavaScript. It analyzes images and extracts the dominant colors, providing a simple API for developers to integrate color palette functionality into their applications.",
-	"license": "ISC",
+	"license": "MIT",
 	"packageManager": "pnpm@10.19.0",
 	"workspaces": [
 		"packages/*"
