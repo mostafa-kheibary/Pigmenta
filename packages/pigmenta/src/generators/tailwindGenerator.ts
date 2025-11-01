@@ -22,7 +22,7 @@ export const tailwindGenerator = async (
 	for (const token in tokens) {
 		let tokenName = token;
 		if (options.tokenPrefix) tokenName = `${options.tokenPrefix}-${token}`;
-		tokensVarsCss += `	--${tokenName}: ${pallets.get(tokens[token][options.default])};\n`;
+		tokensVarsCss += `	--color-${tokenName}: ${pallets.get(tokens[token][options.default])};\n`;
 	}
 	tokensVarsCss += '}\n';
 
@@ -31,8 +31,8 @@ export const tailwindGenerator = async (
 		tokensVarsCss += `  .${theme} {\n`;
 		for (const token in tokens) {
 			let tokenName = token;
-			if (options.tokenPrefix) tokenName = `color-${options.tokenPrefix}-${token}`;
-			tokensVarsCss += `  	--${tokenName}: ${pallets.get(tokens[token][theme])};\n`;
+			if (options.tokenPrefix) tokenName = `${options.tokenPrefix}-${token}`;
+			tokensVarsCss += `  	--color-${tokenName}: ${pallets.get(tokens[token][theme])};\n`;
 		}
 		tokensVarsCss += '  }\n';
 	}
