@@ -2,7 +2,7 @@ import path from 'path';
 import { makeFolder } from './makeFolder.js';
 import { writeFile } from 'fs/promises';
 
-export const generateUnionType = async (keys: Map<string, string>) => {
+export const generateUnionType = async (keys: Map<string, string>, dest: string = './') => {
 	let types = 'import { Options, Pallets } from "pigmenta/types";\n';
 	if (keys.size !== 0) {
 		types += `export type PalletKeys = \n`;
@@ -19,8 +19,8 @@ export const generateUnionType = async (keys: Map<string, string>) => {
 	pallets: Pallets;
 	tokens: Tokens;
 }`;
-	await makeFolder(path.resolve('./.pigmenta'));
-	await writeFile(path.resolve('./.pigmenta/types.d.ts'), types, {
+	await makeFolder(path.resolve(dest, './.pigmenta'));
+	await writeFile(path.resolve(dest, './.pigmenta/types.d.ts'), types, {
 		encoding: 'utf8',
 	});
 };

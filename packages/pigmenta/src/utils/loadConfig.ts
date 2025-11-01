@@ -1,6 +1,8 @@
 import { readFile } from 'fs/promises';
 import { Config } from '../types.js';
 import path from 'path';
+import { flatPallets } from './flatPallets.js';
+import { generateUnionType } from './generateConfigType.js';
 
 export const loadConfig = async (configPath: string) => {
 	const configText = await readFile(path.resolve(configPath), {
@@ -16,6 +18,8 @@ export const loadConfig = async (configPath: string) => {
 	if (module.options?.extend) {
 		for (const extensionPath of module.options.extend) {
 			const config = await loadConfig(extensionPath);
+			const flatPalletsArray = flatPallets(config.pallets);
+			await generateUnionType(flatPalletsArray, path.dirname(extensionPath));
 			pallets = { ...pallets, ...config.pallets };
 			tokens = { ...tokens, ...config.tokens };
 		}
