@@ -18,9 +18,19 @@
 		"type": "git",
 		"url": "git+https://github.com/mostafa-kheibary/Pigmenta.git"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"pigmenta",
+		"color-palette",
+		"image-colors",
+		"color-extraction",
+		"color-analysis",
+		"theming",
+		"design-systems",
+		"javascript",
+		"typescript"
+	],
+	"author": "Mostafa Kheibary",
+	"license": "MIT",
 	"type": "module",
 	"bugs": {
 		"url": "https://github.com/mostafa-kheibary/Pigmenta/issues"

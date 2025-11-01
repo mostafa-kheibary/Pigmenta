@@ -1,11 +1,18 @@
 {
 	"name": "pigmenta-vscode-extension",
 	"displayName": "pigmenta",
+	"icon": "./src/assets/icon.png",
 	"description": "pigmenta",
 	"private": true,
 	"version": "0.0.2",
 	"publisher": "mostafa-kheibary",
 	"packageManager": "pnpm@10.19.0",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mostafa-kheibary/Pigmenta.git"
+	},
+	"author": "Mostafa Kheibary",
 	"engines": {
 		"vscode": "^1.0.0"
 	},

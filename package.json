@@ -3,6 +3,11 @@
 	"version": "1.0.0",
 	"description": "pigmenta is a lightweight image color palette extraction library for JavaScript. It analyzes images and extracts the dominant colors, providing a simple API for developers to integrate color palette functionality into their applications.",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mostafa-kheibary/Pigmenta.git"
+	},
+	"author": "Mostafa Kheibary",
 	"packageManager": "pnpm@10.19.0",
 	"workspaces": [
 		"packages/*"
