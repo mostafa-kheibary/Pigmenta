@@ -7,7 +7,6 @@ export default {
   options: {
     output: "${options.output}",
     dest: "${options.dest}",
-    default: "light"
   },
   pallets: {},
   tokens: {},
